@@ -1,20 +1,9 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-
+import React, { useState } from "react";
+import { View } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import Login from "./screens/Login";
+import SignUp from "./screens/SignUp";
+import GameOT from "./screens/GameOT";
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Hello World Tharindu</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <Login />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
