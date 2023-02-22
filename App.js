@@ -14,6 +14,7 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="LogIn" component={Login} />
         <Stack.Screen name="SignUp" component={SignUp} />
+        <Stack.Screen name="GameOT" component={GameOT} />
       </Stack.Navigator>
     </NavigationContainer>
   );

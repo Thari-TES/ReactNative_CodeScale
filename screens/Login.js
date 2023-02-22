@@ -52,7 +52,10 @@ export default function Login({ navigation }) {
         <Text style={styles.forgotPasswordButton}>Forgot Password?</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.signInButton}>
+      <TouchableOpacity
+        style={styles.signInButton}
+        onPress={() => navigation.navigate("GameOT")}
+      >
         <Text style={styles.signInText}>Sign In</Text>
       </TouchableOpacity>
 
