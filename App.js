@@ -5,5 +5,5 @@ import Login from "./screens/Login";
 import SignUp from "./screens/SignUp";
 import GameOT from "./screens/GameOT";
 export default function App() {
-  return <Login />;
+  return <SignUp />;
 }
