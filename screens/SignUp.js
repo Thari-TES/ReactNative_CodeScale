@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { Feather } from "@expo/vector-icons";
 
-export default function SignUp() {
+export default function SignUp({ navigation }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -109,14 +109,22 @@ export default function SignUp() {
         onChangeText={(value) => setConfirmPassword(value)}
       />
 
-      <TouchableOpacity style={styles.signInButton}>
+      <TouchableOpacity
+        style={styles.signInButton}
+        onPress={() => navigation.navigate("LogIn")}
+      >
         <Text style={styles.signInText}>Sign Up</Text>
       </TouchableOpacity>
 
       <View style={styles.signUpView}>
         <Text style={styles.signUpText}>Have an account? </Text>
         <TouchableOpacity>
-          <Text style={styles.signUpLink}>Sign In</Text>
+          <Text
+            style={styles.signUpLink}
+            onPress={() => navigation.navigate("LogIn")}
+          >
+            Sign In
+          </Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>

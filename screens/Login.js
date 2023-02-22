@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { Feather } from "@expo/vector-icons";
 
-export default function Login() {
+export default function Login({ navigation }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [hidePassword, setHidePassword] = useState(true);
@@ -59,7 +59,12 @@ export default function Login() {
       <View style={styles.signUpView}>
         <Text style={styles.signUpText}>Don't have an account? </Text>
         <TouchableOpacity>
-          <Text style={styles.signUpLink}>Sign Up</Text>
+          <Text
+            style={styles.signUpLink}
+            onPress={() => navigation.navigate("SignUp")}
+          >
+            Sign Up
+          </Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
